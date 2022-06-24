@@ -21,12 +21,65 @@ public class MethodEx01
 		System.out.println("전달된값 : "+ a);
 	}
 	
+	static void check(int a, double d)
+	{
+		double result = a+ d;
+		System.out.println("전달된 값의 합: "+result);
+	}
+	
+	static void check(char c )
+	{
+		System.out.println("전달된 값: "+c);
+	}
+	
+	static void check(boolean b)
+	{
+		System.out.println("전달된값: "+ b);
+	}
+	
+	// 주소값 전달에 의한 call by reference 방식
+	static void check(String s)
+	{
+		System.out.println("전달된 값: "+ s);
+	}
+	
+	// return문은 메소드 가장 마지막 줄에 사용해야 한다.
+	static int check01()
+	{
+		System.out.println("출력");
+		return 50;
+	}
+	
+	static double check02(int a, double d)
+	{
+		double result = a+ d;
+		return result;
+	}
+	
+//	MAIN
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
 		MethodEx01 .check();
 		check(30); 
-
+		check(10 , 20.5);
+		check('A');
+		check(true);
+		check("자바");
+		check(new String("파이썬"));
+		check01();
+		int result = check01();
+		System.out.println("돌려받은값 출력: "+result);
+		System.out.println(check01());
+		
+		double result2 = check02(50, 3.14);
+		System.out.println("전달받은값: "+result2);
+		
+		System.out.println("함수호출로 받은값 "+(int)check02(50, 3.14));
+		
+		double result3 = (double)check02(50, 3.14)+10;
+		System.out.println("계산한값: "+ result3);
+		
 	}
 
 }
