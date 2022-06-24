@@ -14,11 +14,9 @@ public class Break01
 		for(int i=1;;i++)
 		{
 			System.out.println(i+"무한출력");
-			if(i==100) break;
-				
+			if(i==100)
+				break;
 		}
-		
-		
 
 	}
 
