@@ -8,7 +8,7 @@ public class ExplicitConversion2 {
     int intValue = 65;
 
     // int형 변수 값을 char형으로 변환 후 할당
-    char charValue = ( char )intValue; // 10진수 97은 아스키코드값 소문자 a에 해당함. 97을 형변했기때문에 a
+    char charValue = ( char )intValue;
     System.out.println( "charValue = " + charValue );
 
     // float형 변수 초기화.

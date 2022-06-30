@@ -2,46 +2,38 @@ package p2022_06_24;
 
 import java.util.Scanner;
 
-public class MethodEx03 
-{
-		// 키보드로 입력한 2개의 정수 중에서 최대값과 최소값을 구하는 프로그램을 작성하세요
+public class MethodEx03 {
+
+	// 키보드로 입력한 2개의 정수 중에서 최대값과 최소값을 구하는 프로그램을 작성하세요?
+    // (단, 메소드를 이용해서 작성 하세요.)	
 	
-		// 단, 메소드를 이용해서 작성하세요.
-	
-	static int max(int a, int b)
-	{
-		if(a>b)
+	// 최대값
+	static int max(int a, int b) {
+		if(a > b)
 			return a;
-		else 
+		else
 			return b;
 	}
 	
-	static int min(int a, int b)
-	{
-		if(a<b)
+	// 최소값
+	static int min(int a, int b) {
+		if(a < b)
 			return a;
-		else 
+		else
 			return b;
-		
 	}
 	
-	
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("2개의 정수를 입력 하세요?");
+		Scanner sc = new Scanner(System.in);
+		int n1 = sc.nextInt();		// n1 = 10
+		int n2 = sc.nextInt();      // n2 = 20
 		
-		int input=0, input2=0;
-		System.out.println("2개의 정수를 입력해주세요. ");
-		Scanner sc =new Scanner (System.in);
-		
-		input = sc.nextInt();
-		input2 = sc.nextInt();
-		
-		int max = max(input, input2);
-		int min = min(input, input2);
-		
-		System.out.println("입력한 값의 최대값은 : "+max);
-		System.out.println("입력한 값의 최소값은 : "+min);
+		int max = MethodEx03.max(n1, n2);		// max() 메소드 호출
+		int min = MethodEx03.min(n1, n2);		// min() 메소드 호출
+		System.out.println("max="+max);
+		System.out.println("min="+min);
 	}
 
 }
